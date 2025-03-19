@@ -1,0 +1,129 @@
+ * {
+    padding: 0;
+    margin: 0;
+    font-family:  Georgia, serif;
+    box-sizing: border-box;
+}
+
+.nav-bar {
+    padding: 10px 0;
+    background-color: rgb(233, 227, 239);
+}
+
+.nav-bar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.nav-bar ul li {
+    margin: 5px 40px; /* Adjusted for better spacing on smaller screens */
+}
+
+.nav-bar ul li a {
+    text-decoration: none;
+    color: rgb(40, 38, 38);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav-bar ul li a:hover {
+    text-decoration: underline;
+    color: brown;
+    cursor: pointer;
+}
+
+.nav-bar ul li a:is(:link, :active, :visited).active {
+    text-decoration: underline;
+    color:rgb(56, 27, 84);
+}
+
+.about {
+    min-height: 100vh;
+    background-color: rgb(56, 27, 84);
+    padding: 80px 60px; /* Increased padding */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.pic img {
+    height: 220px; /* Increased image size */
+    width: 220px;
+    border-radius: 50%;
+}
+
+.intro p {
+    font-size: 25px;
+    color: aliceblue;
+    max-width: 100%;
+    text-align: left; /* Centers text inside the div */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+    .nav-bar ul li {
+        margin: 10px 30px; /* Adjust spacing */
+    }
+    .pic img {
+        height: 200px;
+        width: 200px;
+    }
+}
+@media (max-width: 992px) { /* Tablets */
+    .nav-bar ul li {
+        margin: 10px 30px; /* Adjust spacing */
+    }
+
+    .pic img {
+        height: 200px;
+        width: 200px;
+    }
+
+    .intro p {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 768px) { /* Mobile Devices */
+
+    .nav-bar ul li {
+        margin: 10px 10px;
+    }
+
+    .about {
+        padding: 50px 20px;
+    }
+
+    .pic img {
+        height: 170px;
+        width: 170px;
+    }
+
+}
+
+@media (max-width: 576px) { /* Extra Small Devices */
+    .nav-bar ul li {
+        margin: 0 10px;
+    }
+    .nav-bar ul li a{
+        font-size: 16px;
+    }
+    .about {
+        padding: 40px 10px;
+    }
+
+    .pic img {
+        height: 150px;
+        width: 150px;
+    }
+
+    .intro p {
+        font-size: 20px; /* Increased text size */
+    }
+}
+
