@@ -1,0 +1,179 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Georgia, serif;
+    box-sizing: border-box;
+}
+
+/* Navigation Bar */
+.nav-bar {
+    padding: 10px 0;
+    background-color: rgb(233, 227, 239);
+}
+
+.nav-bar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Ensure nav items wrap on smaller screens */
+}
+
+.nav-bar ul li {
+    margin: 5px 40px;
+}
+
+.nav-bar ul li a {
+    text-decoration: none;
+    color: rgb(40, 38, 38);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav-bar ul li a:hover {
+    text-decoration: underline;
+    color: brown;
+    cursor: pointer;
+}
+
+.nav-bar ul li a:is(:link, :active, :visited).active {
+    text-decoration: underline;
+    color: rgb(56, 27, 84);
+}
+
+.skill {
+    background-color: rgb(56, 27, 84);
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Add spacing between sections */
+}
+
+.skill h2 {
+    font-size: 32px; /* Reduced font size for better responsiveness */
+    color: rgb(246, 244, 248);
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.skill ul {
+    display: flex;
+    flex-wrap: wrap; /* Allow skill items to wrap on smaller screens */
+    gap: 25px;
+    padding: 0;
+}
+
+.skill ul li {
+    list-style-type: none;
+    height: 50px; /* Let height adjust automatically */
+    width: 200px;
+    background-color: rgb(196, 133, 255);
+    border-radius: 20px;
+    border: 2px solid white;
+    text-align: center;
+    color: rgb(56, 27, 84);
+    font-size: 18px;
+    padding: 10px;
+    font-weight: bold;
+    word-wrap: break-word; /* Ensure text wraps if too long */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Add slight shadow */
+    background-repeat: no-repeat;
+    background-position: 10px center; /* Position logo to the left */
+    background-size: 40px 35px; /* Adjust logo size */
+}
+
+/* Add specific backgrounds for each programming language */
+.lang ul li:nth-child(1) {
+    background-image: url('Java.jpg'); /* Java logo */
+    padding: 10px 10px 10px 40px; /* Add padding to the left for the logo */
+
+}
+
+.lang ul li:nth-child(2) {
+    background-image: url('python.jpg'); /* Python logo */
+    padding: 10px 10px 10px 40px; /* Add padding to the left for the logo */
+}
+
+.lang ul li:nth-child(5) {
+    background-image: url('c.svg'); /* C logo */
+    padding: 10px 10px 10px 40px; /* Add padding to the left for the logo */
+}
+
+.lang ul li:nth-child(6) {
+    background-image: url('html.jpg'); /* HTML logo */
+    padding: 10px 10px 10px 40px; /* Add padding to the left for the logo */
+}
+
+.lang ul li:nth-child(7) {
+    background-image: url('css.jpg'); /* CSS logo */
+    padding: 10px 10px 10px 40px; /* Add padding to the left for the logo */
+}
+
+.lang ul li:nth-child(8) {
+    background-image: url('js.jpg'); /* JavaScript logo */
+    padding: 10px 10px 10px 30px; /* Add padding to the left for the logo */
+}
+
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+    .nav-bar ul li {
+        margin: 5px 20px; /* Reduce spacing in the nav bar */
+    }
+    .skill h2 {
+        font-size: 28px;
+    }
+
+    .skill ul li {
+        width: 170px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 992px) {
+    .nav-bar ul li {
+        margin: 5px 20px; /* Reduce spacing in the nav bar */
+    }
+
+    .skill h2 {
+        font-size: 26px;
+    }
+
+    .skill ul li {
+        width: 170px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-bar ul li {
+        margin: 5px 15px; /* Reduce spacing in the nav bar */
+    }
+
+    .skill h2 {
+        font-size: 24px;
+    }
+
+    .skill ul li {
+        width: 160px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .nav-bar ul li {
+        margin: 0 10px;
+    }
+    .skill h2 {
+        font-size: 25px;
+    }
+
+    .skill ul li {
+        width: 157px;
+        padding: 8px; /* Reduce padding for smaller screens */
+    }
+    .nav-bar ul li a{
+        font-size: 16px;
+    }
+}
