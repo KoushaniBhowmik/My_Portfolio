@@ -1,0 +1,146 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family:  Georgia, serif;
+    box-sizing: border-box;
+}
+.nav-bar{
+    padding: 10px 0;
+    background-color: rgb(233, 227, 239);
+}
+.nav-bar ul{
+    list-style-type:none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.nav-bar ul li{
+    margin: 5px 40px;
+}
+
+.nav-bar ul li a{
+    text-decoration: none;
+    color:rgb(40, 38, 38);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav-bar ul li a:hover{
+    text-decoration:underline;
+    color: brown;
+    cursor:pointer;
+}
+.nav-bar ul li a:is(:link, :active, :visited).active{
+   text-decoration:underline;
+   color: rgb(56, 27, 84);
+}
+
+ .container {
+   width: 100%;
+   padding: 50px;
+   background-color: rgb(56, 27, 84);
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   gap: 30px;
+}
+
+/* Project Boxes */
+.box1, .box2, .box3, .box4, .box5, .box6 {
+   width: 100%;
+   max-width: 400px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 10px;
+   background-color: rgba(255, 255, 255, 0.1);
+   padding: 20px 20px;
+   border-radius: 10px;
+}
+
+.pic img {
+   width: 350px;
+   height: 400px;
+   border-radius: 10px;
+}
+
+.intro {
+   text-align: center;
+   color: aliceblue;
+}
+
+.intro h2 {
+   font-size: 22px;
+   font-weight: bold;
+}
+
+.intro p {
+   font-size: 14px;
+}
+
+.readmore button {
+   padding: 10px 15px;
+   border-radius: 20px;
+   border: none;
+   outline: none;
+   background-color: white;
+   cursor: pointer;
+}
+
+.readmore a {
+   font-size: 12px;
+   text-decoration: none;
+   color: black;
+}
+
+.readmore a:hover {
+   color: brown;
+   font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+   .nav-bar ul li {
+      margin: 5px 20px;
+  }
+   .container {
+       padding: 30px;
+       gap: 20px;
+   }
+}
+
+@media (max-width: 768px) {
+   .nav-bar ul li {
+       margin: 5px 10px;
+   }
+   .container {
+       padding: 20px;
+   }
+}
+
+@media (max-width: 480px) {
+    .nav-bar ul li {
+        margin: 0 10px;
+    }
+    .nav-bar ul li a{
+        font-size: 16px;
+    }
+   .container {
+       padding: 10px;
+   }
+   .intro h2 {
+       font-size: 18px;
+   }
+   .intro p {
+       font-size: 12px;
+   }
+   .readmore button {
+       padding: 8px 12px;
+   }
+   .readmore a {
+       font-size: 10px;
+   }
+}
+
