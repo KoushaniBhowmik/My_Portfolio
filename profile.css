@@ -1,0 +1,130 @@
+ *{
+    margin: 0;
+    padding: 0;
+    font-family:  Georgia, serif;
+    box-sizing: border-box;
+}
+.nav-bar{
+    padding: 10px 0;
+    background-color: rgb(233, 227, 239);
+}
+.nav-bar ul{
+    list-style-type:none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.nav-bar ul li{
+    margin: 5px 40px;
+}
+
+.nav-bar ul li a{
+    text-decoration: none;
+    color:rgb(40, 38, 38);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav-bar ul li a:hover{
+    text-decoration:underline;
+    color: brown;
+    cursor:pointer;
+}
+.nav-bar ul li a:is(:link, :active, :visited).active{
+    text-decoration:underline;
+    color: rgb(56, 27, 84);
+}
+.profile {
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgb(56, 27, 84);
+    color: aliceblue;
+    padding: 30px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.hrk, .gfg, .ninja {
+    width: 90%;
+    max-width: 320px;
+    background-color: rgb(140, 79, 198);
+    border-radius: 20px;
+    border: 5px solid white;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.hrk a, .gfg a, .ninja a {
+    color: aliceblue;
+    font-size: 22px;
+    cursor: grab;
+    margin-bottom: 30px;
+    text-decoration: underline;
+}
+
+.hrk a:hover, .gfg a:hover, .ninja a:hover {
+    font-weight: bold;
+    color: brown;
+    text-decoration: none;
+}
+
+.box li {
+    list-style-type: disc;
+    color: aliceblue;
+    font-size: 20px;
+    text-align: left;
+    margin-left: 20px;
+}
+
+.hrk img, .gfg img, .ninja img {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .nav-bar ul li {
+        margin: 5px 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-bar ul li {
+        margin: 5px 12px;
+    }
+    .profile {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-bar ul li {
+        margin: 0 10px;
+    }
+    .nav-bar ul li a {
+        font-size: 16px;
+    }
+    .profile {
+        padding: 30px 0;
+    }
+    .hrk, .gfg, .ninja {
+        width: 90%;
+        padding: 20px;
+    }
+    .hrk a, .gfg a, .ninja a {
+        font-size: 20px;
+    }
+    .box li {
+        font-size: 18px;
+    }
+}
