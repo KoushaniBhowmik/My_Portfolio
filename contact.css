@@ -1,0 +1,268 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family:  Georgia, serif;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: rgb(56, 27, 84);
+}
+
+.nav-bar {
+    padding: 10px 0;
+    background-color: rgb(233, 227, 239);
+    position: fixed;
+    width: 100%;
+    top: 0;  /* Ensures no space above */
+    left: 0;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+}
+
+.toggle-btn {
+    display: block;
+    background-color: rgb(220, 196, 243);
+    border: none;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: 10px;
+    z-index: 1000;
+}
+
+.nav-bar ul {
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.nav-bar ul li {
+    margin: 0 40px;
+}
+
+.nav-bar ul li a {
+    text-decoration: none;
+    color: rgb(40, 38, 38);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav-bar ul li a:hover {
+    text-decoration: underline;
+    color: brown;
+    cursor: pointer;
+}
+
+.nav-bar ul li a:is(:link, :active, :visited).active {
+    text-decoration: underline;
+    color:rgb(56, 27, 84);
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgb(56, 27, 84);
+    padding-top: 60px;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 290px;
+    background-color: rgb(159, 99, 216);
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    gap:80px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.sidebar .pic img {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.sidebar p {
+    font-size: 20px;
+    color: aliceblue;
+    font-weight: bold;
+    margin-bottom: 80px;
+    text-align: center;
+}
+
+.sidebar .logo {
+    display: flex;
+    gap: 10px;
+}
+
+.sidebar .logo img {
+    height: auto;
+    width: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.sidebar .button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.b1, .b2 {
+    height: 40px;
+    width: 150px;
+    background-color: rgb(233, 227, 239);
+    border-radius: 6px;
+    padding: 5px;
+    text-align: center;
+    margin: 10px;
+    border: none;
+    color: rgb(159, 99, 216);
+}
+
+.b1 a, .b2 a {
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.b1 a:hover, .b2 a:hover {
+    color: brown;
+    font-weight: bold;
+}
+
+/* Right Section */
+.right {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    min-height: 100vh;
+}
+
+.right p {
+    font-size: 35px;
+    font-weight: bold;
+    color: aliceblue;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.right form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+}
+
+.right form input, .right form textarea {
+    height: 40px;
+    width: 100%;
+    background-color: rgb(233, 227, 239);
+    border-radius: 20px;
+    padding: 10px;
+    margin: 15px 0;
+    border: none;
+}
+.right form textarea{
+    height: 60px;
+    border-radius: 15px;
+}
+.right form input:hover, .right form textarea:hover {
+    background-color: rgb(177, 173, 181);
+}
+
+.right form button {
+    height: 50px;
+    width: 120px;
+    background-color: rgb(233, 227, 239);
+    border-radius: 10px;
+    border: none;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.right form button:hover {
+    background-color: brown;
+    color: white;
+    cursor: grab;
+}
+
+/* Map */
+.map{
+    width: 500px;
+}
+.map iframe {
+    width: 100%;
+    max-width: 600px;
+    height: 100vh;
+    border: none;
+}
+
+.map iframe {
+    src: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7376.797758793647!2d88.46591192446567!3d22.726925728831837!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a02753b8a9e1c81%3A0x128c37fbb38dff96!2sBarasat%2C%20West%20Bengal%2C%20India!5e0!3m2!1sen!2sus!4v1640844810852!5m2!1sen!2sus";
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .nav-bar ul li {
+        margin: 0 10px;
+    }
+    .nav-bar ul li a{
+        font-size: 16px;
+    }
+    
+    .container {
+        flex-direction: column;
+        align-items: center;
+        background-color: rgb(56, 27, 84); /* Ensure consistent background */
+    }
+    .sidebar {
+        padding-top:80px ;
+        position: fixed;
+        left: -300px;
+        top: 0;
+        height: 100vh;
+        gap:30px;
+    }
+    .sidebar.active {
+        left: 0;
+    }
+
+    .right {
+        max-width: 100%;
+        text-align: center;
+        background-color: rgb(56, 27, 84); /* Same as contact form */
+    }
+
+    .map {
+        width: 100%;
+        background-color: rgb(56, 27, 84); /* Match background */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .map iframe {
+        max-width: 100%;
+        height: 400px; /* Adjust height for better fit */
+    }
+}

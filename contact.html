@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+    <nav class="nav-bar">
+        <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="project.html">Projects</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="certificate.html">Certificates</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="pic">
+                <img src="my.jpeg" alt="Profile Picture">
+                <p>Koushani Bhowmik</p>
+            </div>
+            <div class="logo">
+                <a href="koushanibhowmik99@gmail.com"><img src="gmail.svg" alt="gmail"></a>
+                <a href="https://github.com/KoushaniBhowmik"><img src="github.svg" alt="github"></a>
+                <a href="https://www.linkedin.com/in/koushani9836/"><img src="linkedin.svg" alt="linkedin"></a>
+            </div>
+            <div class="button">
+                <button class="b1"><a href="KoushaniBhowmik_Resume.pdf" download="Koushani_Bhowmik's_CV">Resume</a></button>
+                <button class="b2"><a href="about.html">About</a></button>
+            </div>
+        </aside>
+
+        <!-- Contact Form -->
+        <section class="right">
+            <p>Contact Me</p>
+            <form action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="6c5ab84d-1341-40ef-b768-b891f1f136b2">
+                <input type="text" placeholder="Username">
+                <input type="email" placeholder="Email">
+                <input type="tel" placeholder="Mobile number">
+                <input type="text" placeholder="Profession">
+                <textarea name="message" placeholder="Your message"></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+
+        <!-- Map -->
+        <section class="map">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7376.797758793647!2d88.46591192446567!3d22.726925728831837!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a02753b8a9e1c81%3A0x128c37fbb38dff96!2sBarasat%2C%20West%20Bengal%2C%20India!5e0!3m2!1sen!2sus!4v1640844810852!5m2!1sen!2sus"
+                allowfullscreen=""
+                loading="lazy">
+            </iframe>
+        </section>
+    </div>
+
+    <script>
+        function toggleSidebar() {
+            document.querySelector(".sidebar").classList.toggle("active");
+        }
+    </script>
+
+</body>
+</html>
